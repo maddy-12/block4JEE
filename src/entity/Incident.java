@@ -1,28 +1,33 @@
 package entity;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Incident {
-	private Long id_incident;
+	private Long id;
 	private String name_incident;
 	
 	private List<Hero> heroes;
 	
-	public Incident(String name_incident, Long id_incident) {
-		this.id_incident = id_incident;
+	public Incident(String name_incident, Long id) {
+		this.id = id;
 		this.name_incident = name_incident;
+	}
+
+	public Incident() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getName_incident() {
 		return name_incident;
 	}
 
-	public Long getId_incident() {
-		return id_incident;
+	public Long getId() {
+		return id;
 	}
 
-	public void setId_incident(Long id_incident) {
-		this.id_incident = id_incident;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public void setName_incident(String name_incident) {

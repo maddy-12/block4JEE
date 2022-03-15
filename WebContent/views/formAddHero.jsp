@@ -1,138 +1,77 @@
-<%@ include file="head.jsp" %>
-<%@ include file="nav.jsp" %>
+<%@ include file="head.jsp"%>
+<%@ include file="nav.jsp"%>
 
 <body>
 	<div class="container form-zone my-5">
 		<div class="text-center">
 			<h1>S'inscrire</h1>
 		</div>
+		<form action='' method="post">
 
-
-		<form action="hero" method="post">
-
-			<!-- Checkbox zone -->
-			<div class="row d-flex justify-content-between">
-				<label for="exampleInputEmail1" class="form-label">Type
+		<label for="exampleInputEmail1" class="form-label">Type
 					d'incident</label>
-				<div class="col-6">
-
-					<div class="mb-3 form-check">
-						<input type="checkbox" class="form-check-input" id="incendie">
-						<label class="form-check-label" for="incendie">Incendie</label>
-					</div>
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="accidentRoutier"> <label class="form-check-label"
-								for="accidentRoutier">Accident routier</label>
+			<!-- Checkbox zone -->
+			<div class="row ">
+				
+				<div class="">
+					<c:forEach var="incident" items="${incidents}">
+						<div class="form-check">
+							<input class="form-check-input"
+								name="incident${incident.id}" type="checkbox"
+								value="${incident.id}" id="${incident.name_incident}"> <label
+								class="form-check-label" for="${incident.name_incident}">
+									${incident.name_incident}
+							</label>
 						</div>
-					</div>
-
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="accidentFluvial"> <label class="form-check-label"
-								for="accidentFluvial">Accident fluvial</label>
-						</div>
-					</div>
-
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="accidentAerien"> <label class="form-check-label"
-								for="accidentAerien">Accident aérien</label>
-						</div>
-					</div>
-
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="eboulement"> <label class="form-check-label"
-								for="eboulement"> Eboulement</label>
-						</div>
-					</div>
+					</c:forEach>
 				</div>
-				<!-- col 2 -->
-				<div class="col-6">
-					<div class="mb-3 form-check">
-						<input type="checkbox" class="form-check-input" id="serpent">
-						<label class="form-check-label" for="serpent">Invasion de serpent</label>
-					</div>
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="gaz"> <label class="form-check-label"
-								for="gaz">Fuite de gaz</label>
-						</div>
-					</div>
+			</div>
 
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="manifestation"> <label class="form-check-label"
-								for="manifestation">Manifestation</label>
-						</div>
-					</div>
+			<!-- Name -->
+			<div class="mb-3">
+				<label for="heroName" class="form-label">Nom</label> <input
+					name="name" type="text" class="form-control" id="heroName"
+					aria-describedby="textHelp" name="name">
+			</div>
+			<!-- phone -->
+			<div class="mb-3">
+				<label for="heroPhone" class="form-label">Téléphone</label> <input
+					type="text" class="form-control" id="phone" name="phone">
+			</div>
 
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="braquage"> <label class="form-check-label"
-								for="braquage">Braquage</label>
-						</div>
-					</div>
+			<!-- Address -->
+			<div class="mb-3">
+				<label for="heroPhone" class="form-label">Adresse</label> <input
+					type="text" class="form-control" name="address" id="heroAddr">
+			</div>
 
-					<div class="col-6">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input"
-								id="prisonnier"> <label class="form-check-label"
-								for="prisonnier">Evasion d’un prisonnier</label>
-						</div>
-					</div>
+			<!-- Latitude -->
+			<div class="mb-3">
+				<label for="heroLatitude" class="form-label">Latitude</label> <input
+					type="float" class="form-control" id="heroLatitude"
+					name="longitude">
+			</div>
 
-				</div>
-
-				<!-- Name -->
-				<div class="mb-3">
-					<label for="heroName" class="form-label">Nom</label> <input
-						name="heroName" type="text" class="form-control" id="heroName"
-						aria-describedby="textHelp">
-				</div>
-				<!-- phone -->
-				<div class="mb-3">
-					<label for="heroPhone" class="form-label">Téléphone</label> <input
-						type="text" class="form-control" id="heroPhone" name="heroPhone">
-				</div>
-
-				<!-- Address -->
-				<div class="mb-3">
-					<label for="heroPhone" class="form-label">Adresse</label> <input
-						type="text" class="form-control" name="heroAddr" id="heroAddr">
-				</div>
-
-				<!-- Latitude -->
-				<div class="mb-3">
-					<label for="heroLatitude" class="form-label">Latitude</label> <input
-						type="text" class="form-control" id="heroLatitude">
-				</div>
-
-				<!-- Longitude -->
-				<div class="mb-3">
-					<label for="heroLongitude" " class="form-label">Longitude</label> <input
-						type="text" class="form-control" id="heroLongitude">
-				</div>
-				<div class="d-flex justify-content-center">
-					<button type="submit" style="width: 200px;" class="btn btn-primary"
-						name="addHero_form">Valider</button>
-				</div>
+			<!-- Longitude -->
+			<div class="mb-3">
+				<label for="heroLongitude" " class="form-label">Longitude</label> <input
+					type="float" class="form-control" id="heroLongitude"
+					name="latitude">
+			</div>
+			<div class="d-flex justify-content-center">
+				<button type="submit" style="width: 200px;" class="btn btn-primary"
+					name="addHero_form">Valider</button>
+			</div>
 		</form>
-		<h4>Tableau des Heros</h4>
-		<table border="1">
-			<th>NOM</th>
-			<th>Téléphone</th>
-			<th>Adresse</th>
-			<th>Latitude</th>
-			<th>Longitude</th>
+		<%-- 		<h4>Tableau des Heros</h4>
+		<table class="table" border="1">
+		<thead class="table-dark">
+			<th scope="col">NOM</th>
+			<th scope="col">Téléphone</th>
+			<th scope="col">Adresse</th>
+			<th scope="col">Latitude</th>
+			<th scope="col">Longitude</th>
+			</thead>
 			<c:forEach var="hero" items="${heroes}">
 				<tr>
 					<td><c:out value="${hero.name}" /></td>
@@ -142,7 +81,14 @@
 					<td><c:out value="${hero.longitude}" /></td>
 				</tr>
 			</c:forEach>
-		</table>
+		</table> --%>
+		<script>
+		$("input:checkbox").click(function() {
+			var bol = $("input:checkbox:checked").length >= 3;     
+			$("input:checkbox").not(":checked").attr("disabled",bol);
+			});
+		</script>
+		
 		<style>
 .form-zone {
 	width: 60%;

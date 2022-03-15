@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `incident_hero` (
 DROP TABLE IF EXISTS `report_incident`;
 CREATE TABLE IF NOT EXISTS `report_incident` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) COLLATE utf8_bin NOT NULL,
+  `address` varchar(50) COLLATE utf8_bin NOT NULL,
   `latitude` int(11) NOT NULL,
   `longitude` int(11) NOT NULL,
   `id_incident` int(11) NOT NULL,
@@ -62,10 +62,8 @@ DROP TABLE IF EXISTS `superhero`;
 CREATE TABLE IF NOT EXISTS `superhero` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8_bin NOT NULL,
-  `type_incidents` int(11) NOT NULL,
   `phone` varchar(10) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `type_incidents` (`type_incidents`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------

@@ -11,15 +11,15 @@
 	           border: #F4F3F6 1px solid;
 	           box-shadow: -6px 15px 15px -12px rgba(0, 0, 0, 0.32); ">
             <div class="col-6"
-                style=" background-image: url('hero.png'); box-sizing: border-box;  border-right: black 1px solid; height: 250px;">
+                style=" background-image: url('assets/hero.png'); box-sizing: border-box;  border-right: black 1px solid; height: 250px;">
                 <p>Superhéro ? Inscrivez-vous !</p>
                 <!-- <img src="hero.png" alt=""> -->
-                <button class="btn btn-primary">Incription</button>
+                <a class="btn btn-primary" href="/superhero/registerHero">Incription</a>
             </div>
 
-            <div class="col-6" style=" background-image: url('incident.PNG');">
+            <div class="col-6" style=" background-image: url('assets/incident.PNG');">
                 <p>Besoin d'aide ? Nous sommes là pour vous !</p>
-                <button class="btn btn-primary">Déclarer un incident</button>
+                <a class="btn btn-primary" href="/superhero/reportIncident">Déclarer un incident</a>
             </div>
         </div>
     </div>
