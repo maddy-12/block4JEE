@@ -1,17 +1,15 @@
 <%@ include file="head.jsp" %>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg mb-3 navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/superhero/home">
-    <img src="assets/superheo.PNG"> 
-    </a>
+    <a class="navbar-brand" href="/superhero/home">My Superhero</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/superhero/home">Home</a>
+          <a class="nav-link active" aria-current="page" href="/superhero/home">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/superhero/registerHero">Inscription</a>
@@ -27,8 +25,5 @@
     </div>
   </div>
 </nav>
-<div>
-<img alt="" src="assets/superhero_blue-2400px.png">
-</div>
 </body>
 </html>

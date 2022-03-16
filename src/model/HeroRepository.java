@@ -27,7 +27,7 @@ public class HeroRepository {
 			
 			PreparedStatement prepare = this.connection.prepareStatement(
                       	"INSERT INTO superhero (name, phone, address, latitude, longitude) "+
-                      	"VALUES (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS
+                      	"VALUES (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS // Récupérer l'id du héro 
                       );
 			prepare.setString(1, hero.getName());	
 			prepare.setString(2, hero.getPhone());
@@ -39,9 +39,9 @@ public class HeroRepository {
 			ResultSet rs=prepare.getGeneratedKeys();
             if(rs.next()){
                 id=rs.getInt(1);
-                }
-			
+                }		
 			System.out.println("inscription réussie");
+		
 			prepare.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -92,35 +92,4 @@ public class HeroRepository {
 		}
 		return heroes;
 	}
-	
-//	public ArrayList<Hero> findAvailableHero(double latitude, double longotude, String incident){
-//		
-//		ArrayList<Hero> heroes = new ArrayList<Hero>(); 
-//		Hero hero;
-//		ResultSet result;
-//		try {
-//			Statement stmt = this.connection.createStatement();
-//			result = stmt.executeQuery("SELECT * FROM superhero");
-//			
-//			while (result.next()) {
-//				hero = new Hero();
-//				hero.setId(result.getLong("id"));
-//				hero.setName(result.getString("name"));
-//				hero.setPhone(result.getString("phone"));
-//				hero.setAddress(result.getString("address"));
-//				hero.setLatitude(result.getDouble("latitude"));
-//				hero.setLongitude(result.getDouble("longitude"));
-//				
-//				double distance = 
-//				heroes.add(hero);
-//			}
-//			stmt.close();
-//			
-//		} catch (SQLException e){
-//			e.printStackTrace();
-//		} 
-//		return null;
-//		
-//	}
-
 }
