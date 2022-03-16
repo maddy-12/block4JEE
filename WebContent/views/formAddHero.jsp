@@ -2,14 +2,17 @@
 <%@ include file="nav.jsp"%>
 
 <body>
+
+	<header>
+	<img src = "/assets/hero/jsp">
+	</header>
 	<div class="container form-zone my-5">
 		<div class="text-center">
 			<h1>S'inscrire</h1>
 		</div>
 		<form action='' method="post">
 
-		<label for="exampleInputEmail1" class="form-label">Type
-					d'incident</label>
+		<label for="exampleInputEmail1" class="form-label">Incidents</label>
 			<!-- Checkbox zone -->
 			<div class="row ">
 				
@@ -35,7 +38,7 @@
 			</div>
 			<!-- phone -->
 			<div class="mb-3">
-				<label for="heroPhone" class="form-label">Téléphone</label> <input
+				<label for="heroPhone" class="form-label">Telephone</label> <input
 					type="text" class="form-control" id="phone" name="phone">
 			</div>
 
@@ -63,25 +66,8 @@
 					name="addHero_form">Valider</button>
 			</div>
 		</form>
-		<%-- 		<h4>Tableau des Heros</h4>
-		<table class="table" border="1">
-		<thead class="table-dark">
-			<th scope="col">NOM</th>
-			<th scope="col">Téléphone</th>
-			<th scope="col">Adresse</th>
-			<th scope="col">Latitude</th>
-			<th scope="col">Longitude</th>
-			</thead>
-			<c:forEach var="hero" items="${heroes}">
-				<tr>
-					<td><c:out value="${hero.name}" /></td>
-					<td><c:out value="${hero.phone}" /></td>
-					<td><c:out value="${hero.address}" /></td>
-					<td><c:out value="${hero.latitude}" /></td>
-					<td><c:out value="${hero.longitude}" /></td>
-				</tr>
-			</c:forEach>
-		</table> --%>
+	
+	<!-- Limiter le nombre de checkboxes coché -->
 		<script>
 		$("input:checkbox").click(function() {
 			var bol = $("input:checkbox:checked").length >= 3;     
@@ -89,13 +75,14 @@
 			});
 		</script>
 		
+		<!-- CSS -->
 		<style>
-.form-zone {
-	width: 60%;
-	padding: 20px;
-	border: #F4F3F6 1px solid;
-	box-shadow: -6px 15px 15px -12px rgba(0, 0, 0, 0.32);
-}
-</style>
+			.form-zone {
+							width: 60%;
+							padding: 20px;
+							border: #F4F3F6 1px solid;
+							box-shadow: -6px 15px 15px -12px rgba(0, 0, 0, 0.32);
+						}
+		</style>
 	</div>
 </body>

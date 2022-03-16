@@ -2,28 +2,33 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Superhero</a>
+    <a class="navbar-brand" href="/superhero/home">
+    <img src="assets/superheo.PNG"> 
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/superhero/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inscription</a>
+          <a class="nav-link" aria-current="page" href="/superhero/registerHero">Inscription</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Déclarer un incident</a>
+          <a class="nav-link" aria-current="page" href="#">Déclarer un incident</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="#">Superhéros</a>
+          <a class="nav-link" aria-current="page" href="/superhero/HeroList">Superhéros</a>
         </li>
 
       </ul>
     </div>
   </div>
 </nav>
+<div>
+<img alt="" src="assets/superhero_blue-2400px.png">
+</div>
 </body>
 </html>

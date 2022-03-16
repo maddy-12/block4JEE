@@ -17,7 +17,7 @@ import model.IncidentTypeRepository;
 /**
  * Servlet implementation class ServletHeroList
  */
-@WebServlet("/ServletHeroList")
+@WebServlet("/HeroList")
 public class ServletHeroList extends HttpServlet {
 	private HeroRepository heroRepository;
 	private IncidentTypeRepository incidentTypeRepository;
